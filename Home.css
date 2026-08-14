@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-image: url("images/Home.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.Navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+.Logo{
+    color:gold;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.MenuBar{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.MenuBar a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.MenuBar a:hover{
+    color: gold;
+}
+.dropdown_content{
+    color: white;
+    list-style: none;
+    font-weight: bold;
+    padding: 0;
+    margin: 5px;
+    display:none;
+}
+.dropdown:hover .dropdown_content{
+    display: block;
+}
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 60px 40px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.Home h1{
+    color: gold;
+    font-size: 60px;
+    margin-bottom: -20px;
+}
+
+.Home p{
+    color: #f0f0f0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.ExploreBtn{
+    background-color: gold;
+    color: #780116;
+    padding: 15px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+
+    animation: blink 1s infinite;
+}
+.Home a{
+    text-decoration: none;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media (max-width:750px) {
+    .Navbar{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .MenuBar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+        .Home{
+        width: 90%;
+        max-width: 350px;
+        padding: 40px 20px;
+    }
+
+    .Home h1{
+        font-size: 40px;
+    }
+
+    .Home p{
+        font-size: 16px;
+    }
+
+    button{
+        width: 100%;
+    }
+}
+    
